@@ -1,0 +1,602 @@
+
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --color-font-primary: rgb(17, 17, 17);
+  --color-font-secondary: #626161;
+  --color-bg-primary: #504f4c;
+  --color-bg-secondary: rgb(245, 244, 241);
+  --color-form-border: #414141;
+  --color-form-focus: #ac8d04;
+
+  /* Spacing */
+  --spacing-sm: 1rem;
+
+  /* Font Sizes */
+  --font-size-base: 1.6rem;
+  --font-size-lg: 4rem;
+
+  /* Border Radius */
+  --border-radius: 5px;
+}
+
+/* GLOBAL STYLES */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary);
+  font-size: var(--font-size-base);
+}
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(./images/bg-afro-pattern.webp) center/cover no-repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+#page-top {
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/bg-afro-pattern.webp);
+}
+
+/* HEADER AND FOOTER */
+header,
+footer {
+  color: red;
+  padding: var(--spacing-sm);
+}
+.wrapper{
+  background: rgb(255,255,255);
+background: -moz-radial-gradient(circle, rgba(255,255,255,1) 38%, rgba(0,0,0,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 38%, rgba(0,0,0,1) 100%);
+background: radial-gradient(circle, rgba(255,255,255,1) 38%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+}
+/* Navigation Styles */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.nav-item {
+  padding: var(--spacing-sm);
+}
+
+.nav-item.white-bg:hover{
+  background-color: black; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.2); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  font-weight: bolder;
+
+}
+.nav-item.white-bg {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+.nav-item.black-bg:hover{
+  background-color:white; /* Change background color on hover */
+  color: rgb(3, 2, 2); /* Change text color on hover */
+  transform: scale(1.2); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  font-weight: bolder;
+}
+
+.nav-item.black-bg {
+  background-color: black;
+  color: white;
+  outline: 1px solid white;
+}
+
+.top-nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+}
+
+.language-btn {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+}
+
+/* HERO SECTION */
+.hero-image {
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  background-image: url(./images/anphome3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius);
+  border: solid transparent;
+  border-width: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero-text {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-size: larger;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+      text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(246, 244, 244);
+  text-transform: capitalize;
+  }
+  
+
+  .hero-text button {
+    border: none;
+    outline: 3px solid orange;
+    display: inline-block;
+    padding: 10px 25px;
+    color: rgb(252, 243, 243);
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: var(--font-size-sm); 
+  }
+  
+  .hero-text button:hover {
+    background-color: orange; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.2); /* Slightly increase size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    font-weight: bolder;
+    margin: 10px;
+  }
+  
+
+/* LINE-UP SECTION */
+#line-up {
+  font-size: var(--font-size-lg);
+  color: var(--color-font-primary);
+  text-align: center;
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  font-weight:bolder;
+  font-style: normal;
+}
+
+.about {
+  text-align: center;
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  font-weight:bolder;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+#tickets {
+ 
+  font-size: var(--font-size-sm);
+  color: var(--color-font-primary);
+  text-align: center;
+  position: relative;
+}
+
+.ticketsH2{
+  font-family: "Libre Barcode 39 Extended Text", system-ui;
+  font-weight:bolder;
+  font-size: 36px;
+  font-style: normal;
+}
+
+.ticketsp{
+  font-size: var(--font-size-lg);
+  color: var(--color-font-primary);
+  text-align: center;
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Adjust other sections as needed for responsiveness */
+.marquee-container {
+  overflow: hidden;
+  height: 3rem;
+  position: relative;
+}
+
+.js-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  font-weight: bolder;
+  font-size: 24px;
+
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  
+  
+}
+
+/* Activates flexbox on image slides. */
+.carousel-slide {
+  display: flex;
+}
+
+/* Defines sizing of images. */
+.carousel-slide img {
+  width: 100%;
+  display: none;
+}
+
+/* Identifies how the images will be displayed when they are active. */
+.carousel-slide img.active {
+  display: block;
+}
+
+/* Set the positioning of the left and right arrow carousel navigation.  */
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Defines the color of the carousel arrows navigation. The color of the arrows
+should be in the contrast with the images to make them visible. */
+.carousel-navigation .prev,
+.next {
+  color: white;
+}
+
+/* Alignments and coloring of the left and right arrow navigation. */
+.carousel-navigation button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* The carousel bullets points alignment. */
+.carousel-bullets {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Setting up the color of the non-active carousel bullets. You might want to
+change it according to your brand color pallet.*/
+.carousel-bullets .bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Setting up the color of the active carousel bullets. You might want to
+change it according to your brand color pallet.*/
+.carousel-bullets .bullet.active {
+  background-color: #717171;
+} 
+.cards-container {
+  background-color: #fff;
+}
+
+/* Cards section */
+#cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  justify-content: center;
+  align-content: space-between;
+}
+
+/* Card styles */
+.card {
+  max-width: 300px;
+  border: 3px solid rgb(10, 10, 10);
+  border-radius: 50px;
+  flex-wrap: wrap;
+  background-color:#fff(193, 191, 191, 0.932);
+  box-shadow: 10px 10px 10px rgb(14, 13, 13);
+  margin: 10px;
+  padding: 5px;
+  text-align: center; /* Center all text inside the card */
+  font-family: 'Shadows Into Light'; 
+  font-size: 30px;
+}
+
+
+.card:hover{
+
+  background-color: rgb(8, 8, 8); /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.08); /* Slightly increase size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  font-weight: bolder;
+  margin: 10px;
+
+}
+
+
+
+/* Card image */
+.card img {
+  width: 100%;
+ border-radius: 50px;
+  margin-bottom: var(--spacing-sm);
+  outline: 3px solid black;
+}
+
+.card-button{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 3px solid #090a0a;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b0a0a;
+  text-shadow: 0 1px #fff;
+}
+
+/* Footer Styles */
+footer.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  padding: var(--spacing-sm); /* Add some padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Footer styles */
+footer.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+footer .social-media-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+footer .social-media-icons li {
+  margin: 0 10px;
+}
+
+footer .social-media-icons img {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+}
+
+footer p {
+  font-size: var(--font-size-sm);
+  color: var(--color-font-primary);
+  text-align: center;
+  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  font-weight:bolder;
+  font-style: normal;
+  margin: 10px 0;
+  text-align: center;
+  
+  
+}
+
+footer a {
+  color: var(--color-font-primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.rights {
+  font-size: 0.8rem;
+  color: var(--color-font-primary);
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.LButton{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid black;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 3px solid #090a0a;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f0f0f;
+  text-shadow: 0 1px #fff;
+}
+ .button-back-top{
+  color: red;
+  text-transform: uppercase;
+ }
+
+
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(50% - var(--spacing-sm));
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+/* MEDIA QUERIES */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .hero-image {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .top-nav-link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .language-btn {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .hero-image {
+    height: 50vh;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for smaller mobile screens if necessary */
+  .hero-image {
+    height: 40vh;
+  }
+
+  .hero-text {
+    font-size: 1.6rem;
+  }
+
+ 
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }}
